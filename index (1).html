@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор стоимости услуги</title>
+</head>
+<body>
+    <h1>Калькулятор стоимости услуги</h1>
+    <form id="calc">
+        <p>
+            <label for="quantity">Количество:</label>
+            <input type="text" id="quantity" value="1">
+        </p>
+
+        <fieldset>
+            <legend>Тип услуги</legend>
+            <label><input type="radio" name="service" value="basic" checked> Базовая — 1000 руб.</label><br>
+            <label><input type="radio" name="service" value="premium"> Премиум — 2000 руб.</label><br>
+            <label><input type="radio" name="service" value="express"> Экспресс — 1500 руб.</label>
+        </fieldset>
+
+        <p id="options-block" hidden>
+            <label for="option">Опция:</label>
+            <select id="option">
+                <option value="standard">Стандартная (+0 руб.)</option>
+                <option value="extended">Расширенная (+500 руб.)</option>
+                <option value="max">Максимальная (+1000 руб.)</option>
+            </select>
+        </p>
+
+        <p id="property-block" hidden>
+            <label><input type="checkbox" id="property"> Срочное выполнение (+300 руб.)</label>
+        </p>
+    </form>
+
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
